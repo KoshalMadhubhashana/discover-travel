@@ -1,0 +1,8 @@
+.paragraph-container p {
+  text-align: justify;
+}
+.paragraph-container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
+}

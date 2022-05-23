@@ -1,0 +1,9 @@
+.activity-paragraph-container p {
+    text-align: justify;
+  }
+  .activity-paragraph-container {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  

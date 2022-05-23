@@ -1,0 +1,59 @@
+.forImage {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    text-align: center;
+    display: inline-block;
+    border-radius: 4px 4px 0 0;
+    transition: 0.5s ease;
+  }
+  .forImage:hover {
+    opacity: 0.5;
+  }
+  .activity-name {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    color: black;
+  }
+  
+  .activity-card {
+    word-wrap: break-word;
+    width: 250px;
+    margin: 32px;
+    padding-bottom: 10px;
+    background-color: rgb(238, 238, 238);
+    border-radius: 4px;
+    transition: 0.2s linear;
+    cursor: pointer;
+  }
+  
+  .activity-card:hover {
+    opacity: 0.8;
+  }
+  
+  .activity-description {
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgb(114, 114, 114);
+  }
+
+.more-details-btn{
+    background-color: #6369d1;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 15px;
+    margin: 4px auto;
+    cursor: pointer;
+    border-radius: 4px;
+}

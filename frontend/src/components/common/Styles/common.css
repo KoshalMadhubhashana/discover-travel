@@ -1,0 +1,78 @@
+
+.mybg{
+    border-radius: 4px;
+    width: 100%;
+    /*background: #e8ebf7;*/
+    background: #f3f4f8f0;
+    /*background: rgb(238, 238, 238);*/
+    border: none;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.mybtn-primary{
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+
+    cursor: pointer;
+    background-color: #e8ebf7;
+    color: #23231a;
+    border: 2px solid #6369d1;
+    border-radius: 5px;
+    font-family: "Aldrich", sans-serif;
+}
+
+.mybtn-primary:hover{
+    color: white;
+    background: #6369d1;
+    border:2px solid #6369d1;
+}
+
+.sub-heading {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Aldrich", sans-serif;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 0px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.btn-submit {
+    width: 200px;
+    height: 45px;
+}
+
+.btn-active {
+    color: white;
+    background: #6369d1;
+    border: #6369d1;
+}
+
+.mybtn-danger {
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+
+    cursor: pointer;
+    background-color: #e8ebf7;
+    color: #23231a;
+    border: 2px solid #CC444B;
+    border-radius: 5px;
+    font-family: "Aldrich", sans-serif;
+}
+.mybtn-danger:hover {
+    color: white;
+    background: #CC444B;
+    border: #CC444B;
+}
+
+.gridbox{
+    /*background: rgb(238, 238, 238);*/
+    border-radius: 6px;
+    margin: 10px;
+    min-width: 340px;
+}
+.ant-card {
+    border-radius: 6px;
+    box-shadow: 0 0px 3px 0px rgba(0, 0, 0, 0.2);
+}

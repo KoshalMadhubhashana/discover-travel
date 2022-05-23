@@ -1,0 +1,23 @@
+.add-activity-btn{
+    color: #e8ebf7;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #6369d1;
+    color: white;
+    border: 2px solid #6369d1;
+    border-radius: 5px;
+    font-family: "Aldrich", sans-serif;
+    align-items: flex-end;
+}
+.acivity-btn-container{
+    margin: 10px auto;
+    width: 95%;
+    display: flex;
+    justify-content: end;
+    
+}
