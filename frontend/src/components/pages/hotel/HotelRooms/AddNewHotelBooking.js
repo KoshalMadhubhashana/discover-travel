@@ -20,7 +20,7 @@ export default class AddNewHotelBooking extends Component {
 
     componentDidMount() {
         // const id = this.props.match.params.id;
-        const id = window.location.href.split("http://localhost:3000/hotelpackagedetails/")[1];
+        const id = window.location.href.split("http://localhost:3000/addnewhotelbooking/")[1];
         axios.get(`http://localhost:8070/hotelpackage/read/${id}`).then((res) => {
             if (res.data.success) {
                 this.setState({
@@ -61,7 +61,7 @@ export default class AddNewHotelBooking extends Component {
             if (res.data.success) {
                 // eslint-disable-next-line no-restricted-globals
                 if (confirm("Your reservation was Successfull, please select OK to pay!")) {
-                    window.location.href = `/payment/add-room/${this.props.match.params.id}`;
+                    window.location.href = `/pay/${this.amount}`;
                 } else {
                     window.location.href = "/userhotelbooking";
                 }
@@ -77,10 +77,14 @@ export default class AddNewHotelBooking extends Component {
         return yyyy + "-" + mm + "-" + dd;
     };
 
-
+    randomIntFromInterval(min, max) { // min and max included
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    }
+    amount = this.randomIntFromInterval(10000, 40000);
     render() {
 
         const {roomType, details, price, size, maxCapacity} = this.state.post;
+
 
         return (
             <div>
@@ -124,6 +128,19 @@ export default class AddNewHotelBooking extends Component {
                                                                    disabled
                                                                    onChange={this.handleInputChange}/>
                                                             <span class="select-arrow"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-sm-5">
+                                                        <div className="form-group">
+                                                            <span className="form-label">Price</span>
+                                                            <input type="text"
+                                                                   className="form-control"
+                                                                   name="capacity"
+                                                                   placeholder=""
+                                                                   value={this.amount}
+                                                                   disabled
+                                                                   onChange={this.handleInputChange}/>
+                                                            <span className="select-arrow"></span>
                                                         </div>
                                                     </div>
                                                 </div>

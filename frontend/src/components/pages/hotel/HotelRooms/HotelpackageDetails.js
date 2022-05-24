@@ -22,7 +22,10 @@ export default class HotelpackageDetails extends Component {
         // const id = this.props.match.params.id;
         const id = window.location.href.split("http://localhost:3000/hotelpackagedetails/")[1];
         axios.get(`http://localhost:8070/hotelpackage/read/${id}`).then((res) => {
+            console.log("hrere", res)
+            console.log("hrere", res.data)
             if (res.data.success) {
+                console.log(res.data);
                 this.setState({
                     post: res.data.HotelPackage
                 });
@@ -45,7 +48,7 @@ export default class HotelpackageDetails extends Component {
 
 
     render() {
-
+        console.log("State",this.state.post)
         const {roomType, details, price, size, maxCapacity, packageImage} = this.state.post;
 
         return (

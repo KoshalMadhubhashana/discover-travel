@@ -6,9 +6,8 @@ import { Card } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import '../../../common/Styles/HotelRoomStyle.css'
-import Header from '../Header';
-import Footer from '../Footer';
 import Navbar from "../../../common/navbar/navbar";
+import Footer from "../../../common/footer/footer";
 
 export default class hotelpackage extends Component{
 
