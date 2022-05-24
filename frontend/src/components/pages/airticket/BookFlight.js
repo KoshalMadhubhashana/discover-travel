@@ -66,6 +66,8 @@ const BookFlight = () => {
   };
 
   const userHandler = async (placement) => {
+    window.location.href="/searchresults"
+
     // create handler for saving data to the db
     setLoading(true);
 
@@ -350,7 +352,7 @@ const BookFlight = () => {
 
                     <Form.Item {...tailLayout}>
                       <div className="flex ml-12  mt-6">
-                        <Button type="primary" htmlType="submit" className="mybtn-primary btn-submit">
+                        <button type="primary" htmlType="submit" className="mybtn-primary btn btn-submit" >
                           {loading ? (
                             <>
                               <Spin /> Serching...
@@ -358,7 +360,7 @@ const BookFlight = () => {
                           ) : (
                             "Search Flight"
                           )}
-                        </Button>{" "}
+                        </button>{" "}
                       </div>
                     </Form.Item>
                   </Form>

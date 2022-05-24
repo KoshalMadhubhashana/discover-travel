@@ -3,6 +3,8 @@ import DragDrop from "../drag-drop-box/drag-drop-image-box";
 import "./add-activity-form.css";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
+import "./../../../../../common/Styles/common.css";
+
 
 const AddActivityForm = () => {
   const [activityName, setActivityname] = useState("");
@@ -88,7 +90,7 @@ const AddActivityForm = () => {
           />
           <br />
           <br />
-          <button type="submit" className="submit-btn" disabled={loading}>
+          <button type="submit" className="btn mybtn-primary submit-btn" disabled={loading}>
             {loading ? "Submitting..." : "Submit"}
           </button>
           <ToastContainer style={{ marginTop: "50px" }} />

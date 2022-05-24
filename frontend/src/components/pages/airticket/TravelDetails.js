@@ -150,13 +150,9 @@ const TravelDetails = () => {
                                                     </td>
 
                                                     <td class="text-2xl px-6 py-4 whitespace-nowrap border-r-4 border-sky-700">
-                                                        <NavLink to={`/update/${value._id}`}>
+                                                        <NavLink to={`/update-airticket/${value._id}`}>
                                                             <EditOutlined style={{color: "green"}}/>
                                                         </NavLink>{" "}
-                                                        <DeleteOutlined
-                                                            style={{color: "red"}}
-                                                            onClick={() => deleteDetails(value._id)}
-                                                        />
                                                     </td>
                                                 </tr>
                                                 </tbody>
@@ -165,9 +161,9 @@ const TravelDetails = () => {
                                     </table>
                                     <div className=" mt-6 float-right mr-24 translate-x-2">
                                         <NavLink to="/bookflight">
-                                            <Button type="primary" className="mybtn-danger">
+                                            <button type="primary" className="btn mybtn-danger">
                                                 Back
-                                            </Button>
+                                            </button>
                                         </NavLink>
                                     </div>
                                     <br/>

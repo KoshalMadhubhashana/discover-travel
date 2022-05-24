@@ -1,14 +1,13 @@
 import ActivityDetailsPage from "./components/pages/activity/activity-details/activity-details";
-import HomePage from "./components/pages/activity/home/home-page";
-import { Routes, Route } from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import AddActivityPage from "./components/pages/activity/add-activity/add-activity-page";
 import ActivitiesPage from "./components/pages/activity/activities/activities-page";
 import ManageActivityPage from "./components/pages/activity/manage-activity/manage-activity-page";
-import UpdateActivityForm from "./components/pages/activity/update-activity/components/add-activity-form/add-activity-form";
+import UpdateActivityForm
+    from "./components/pages/activity/update-activity/components/add-activity-form/add-activity-form";
 import Home from "./components/pages/airticket/Home";
 import Home2 from "./components/pages/guide/Home";
 import AddTravelDetails from "./components/pages/airticket/AddTravelDetails";
-import Adminpage from "./components/pages/airticket/Adminpage";
 import TravelDetails from "./components/pages/airticket/TravelDetails";
 import Dashboard from "./components/pages/airticket/Dashboard";
 import UpdateTravelDetails from "./components/pages/airticket/UpdateTravelDetails";
@@ -18,93 +17,136 @@ import Profile from "./components/pages/guide/Profile";
 import Inbox from "./components/pages/guide/inbox";
 import ContactGuid from "./components/pages/guide/ContactGuid";
 import GuideDetaiils from "./components/pages/guide/GuideDetaiils";
-import Login from "./components/pages/guide/Login";
-import GuidSignUpForm from "./components/pages/guide/GuidSignUpForm";
-import ForgotPasword from "./components/pages/guide/ForgotPassword";
-import ResetPassword from "./components/pages/guide/ResetPassword";
 
-// import HomePage from './components/Home/HomePage';
-import adminhotelbooking from './components/pages/hotel/HotelRooms/AdminHotelBooking';
-import hotelbookingdetails from './components/pages/hotel/HotelRooms/HotelBookingDetails';
-import addnewhotelbooking from './components/pages/hotel/HotelRooms/AddNewHotelBooking';
-import edithotelbooking from './components/pages/hotel/HotelRooms/EditHotelBooking';
-import hotelpackage from './components/pages/hotel/HotelRooms/HotelPackage';
-import adminhotelpackage from './components/pages/hotel/HotelRooms/AdminHotelPcakage';
-import adminaddhotelpackage from './components/pages/hotel/HotelRooms/AdminAddHotelPackage';
-import adminedithotelpackage from './components/pages/hotel/HotelRooms/AdminEditHotelPackage';
-import adminhotelpackagedetails from './components/pages/hotel/HotelRooms/AdminHotelPackageDetails';
+
+import Adminhotelbooking from './components/pages/hotel/HotelRooms/AdminHotelBooking';
+import Hotelbookingdetails from './components/pages/hotel/HotelRooms/HotelBookingDetails';
+import Addnewhotelbooking from './components/pages/hotel/HotelRooms/AddNewHotelBooking';
+import Edithotelbooking from './components/pages/hotel/HotelRooms/EditHotelBooking';
+import Adminhotelpackage from './components/pages/hotel/HotelRooms/AdminHotelPcakage';
+import Adminaddhotelpackage from './components/pages/hotel/HotelRooms/AdminAddHotelPackage';
+import Adminedithotelpackage from './components/pages/hotel/HotelRooms/AdminEditHotelPackage';
+import Adminhotelpackagedetails from './components/pages/hotel/HotelRooms/AdminHotelPackageDetails';
 import Gallery from './components/pages/hotel/Home/Gallery';
 import ContactUs from './components/pages/hotel/Home/Contactus';
 import ContactUsAdmin from './components/pages/hotel/Home/ContactUsAdmin';
-import AdminHome from  './components/pages/hotel/Home/AdminHome';
-import hotelpackagedetails from './components/pages/hotel/HotelRooms/HotelPackageDetails';
+import CommonAdminHome from './components/pages/hotel/Home/CommonAdminHome';
+import Hotelpackagedetails from './components/pages/hotel/HotelRooms/HotelpackageDetails';
 import Services from './components/pages/hotel/Home/Services';
 import SearchHotelBooking from './components/pages/hotel/HotelRooms/SearchHotelBooking';
 import UserHotelBookingDetails from './components/pages/hotel/HotelRooms/UserHotelBookingDetails';
-
-import NavBar from "./components/pages/guide/Navbar";
+import Hotelpackage from "./components/pages/hotel/HotelRooms/HotelPackage";
+import AllPayment from "./components/pages/payments/AllPayment";
+import Header from "./components/pages/payments/Header";
+import EditPayment from "./components/pages/payments/myPayments";
+import Insertfunction from "./components/pages/payments/paymentDetails";
+import Footer from "./components/pages/payments/Footer";
+import InsuranceNavbar from "./components/pages/insurance/InsuranceNavbar";
+import Package from "./components/pages/insurance/Package";
+import PackageSecond from "./components/pages/insurance/PackageSecond";
+import AdminContact from "./components/pages/insurance/AdminContact";
+import UpdatePackage from "./components/pages/insurance/UpdatPackage";
+import Navbar from "./components/common/navbar/navbar";
+import Register from "./components/pages/user/Register/Register";
+import Login from "./components/pages/user/Login/Login";
+import ForgotPasword from "./components/pages/user/Register/ForgotPassword";
+import ResetPassword from "./components/pages/user/Register/ResetPassword";
+import SearchResults from "./components/pages/airticket/SearchResults";
+import MyBooking from "./components/pages/airticket/MyBooking";
+import ReviewBooking from "./components/pages/airticket/ReviewBooking";
+import AdminAirTicket from "./components/pages/airticket/AdminAirTicket";
+import HomePage from "./components/pages/hotel/Home/HomePage";
 
 function App() {
-  return (
-    <div className="App">
-      <Routes>
-        {/*Activity*/}
-        <Route path="/" element={<HomePage />} />
-        <Route path="/activityDetailsPage" element={<ActivityDetailsPage />} />
-        <Route path="/addActivityPage" element={<AddActivityPage />} />
-        <Route path="/activitiesPage" element={<ActivitiesPage />} />
-        <Route path="/manageActivityPage" element={<ManageActivityPage />} />
-        <Route path="/updateActivityPage/:id" element={<UpdateActivityForm />} />
+    return (
+        <div className="App">
+            <Routes>
+                {/*Activity*/}
+                {/*<Route path="/" element={<HomePage/>}/>*/}
+                <Route path="/activityDetailsPage" element={<ActivityDetailsPage/>}/>
+                <Route path="/addActivityPage" element={<AddActivityPage/>}/>
+                <Route path="/activitiesPage" element={<ActivitiesPage/>}/>
+                <Route path="/manageActivityPage" element={<ManageActivityPage/>}/>
+                <Route path="/updateActivityPage/:id" element={<UpdateActivityForm/>}/>
 
-        {/*AirTicket*/}
-        {/*<Route path="/" element={<Home />} />*/}
-        {/*<Route path="/dashbord" element={<Dashboard />} />*/}
-        <Route path="/addtraveldetails" element={<AddTravelDetails />}/>
-        <Route path="/adminpage" element={<Adminpage />} />
-        <Route path="/traveldetails" element={<TravelDetails />} />
-        <Route path="/update/:id" element={<UpdateTravelDetails />} />
-        <Route path="/bookflight" element={<BookFlight />} />
+                {/*AirTicket*/}
+                {/*<Route path="/" element={<Home />} />*/}
+                {/*<Route path="/dashbord" element={<Dashboard/>}/>*/}
+                <Route path="/addtraveldetails" element={<AddTravelDetails/>}/>
+                <Route path="/adminairticket" element={<AdminAirTicket/>}/>
+                <Route path="/traveldetails" element={<TravelDetails/>}/>
+                <Route path="/update-airticket/:id" element={<UpdateTravelDetails/>}/>
+                <Route path="/bookflight" element={<BookFlight/>}/>
+                <Route path="/searchresults" element={[<Navbar />, <SearchResults />]}/>
+                <Route path="/mybooking" element={[<Navbar />, <MyBooking />]} />
+                <Route path="/reviewbooking" element={[<Navbar />, <ReviewBooking />]}/>
 
-        {/*Guide*/}
-        <Route path="/home" element={ <Home2 />} />
+                {/*Guide*/}
+                {/*<Route path="/home" element={ <Home2 />} />*/}
 
-        <Route path="/user-dashboard/:username" element={<UserDashbord/>}/>
-        <Route path="/user-dashboard/:username/profile/:id" element={<Profile/>}/>
-        <Route path="/user-dashboard/:username/inbox" element={<Inbox/>}/>
-        <Route path="/contactguide/:id" element={<ContactGuid/>}/>
-        <Route path="/guidedetails" element={<GuideDetaiils/>} />
-        <Route path="/login" element={[<NavBar />,<Login/>]} />
-        <Route path="/register" element={[<NavBar />,<GuidSignUpForm/>]} />
-        <Route path="/forgotpassword" element={[<NavBar />,<ForgotPasword/>]} />
-        <Route path="/passwordreset/:resetToken" element={[<NavBar />,<ResetPassword/>]} />
+                <Route path="/user-dashboard/:username" element={<UserDashbord/>}/>
+                <Route path="/user-dashboard/:username/profile/:id" element={<Profile/>}/>
+                <Route path="/user-dashboard/:username/inbox" element={<Inbox/>}/>
+                <Route path="/contactguide/:id" element={<ContactGuid/>}/>
+                <Route path="/guidedetails" element={<GuideDetaiils/>}/>
+                {/*<Route path="/login" element={[<NavBar/>, <Login/>]}/>*/}
+                {/*<Route path="/register" element={[<NavBar/>, <GuidSignUpForm/>]}/>*/}
+                {/*<Route path="/forgotpassword" element={[<NavBar/>, <ForgotPasword/>]}/>*/}
+                {/*<Route path="/passwordreset/:resetToken" element={[<NavBar/>, <ResetPassword/>]}/>*/}
 
-        {/*<Route path="/admin" element={<Adminpage />} />*/}
+                <Route path="/admin" element={<CommonAdminHome />} />
 
-        {/*Hotel*/}
+                {/*Hotel*/}
 
 
-        {/*<Route path ="/" exact component={HomePage}/>*/}
-        <Route path="/adminhotelbooking" exact component = {adminhotelbooking}/>
-        <Route path="/userhotelbooking/hotelbookingdetails/:id" exact component = {hotelbookingdetails}/>
-        <Route path="/addnewhotelbooking/:id" exact component = {addnewhotelbooking}/>
-        <Route path="/edithotelbooking/:id" exact component = {edithotelbooking}/>
-        <Route path="/hotelpackage" exact component = {hotelpackage}/>
-        <Route path="/adminhotelpackage" exact component = {adminhotelpackage}/>
-        <Route path="/adminaddhotelpackage" exact component = {adminaddhotelpackage}/>
-        <Route path="/adminedithotelpackage/:id" exact component = {adminedithotelpackage}/>
-        <Route path="/adminhotelpackagedetails/:id" exact component = {adminhotelpackagedetails}/>
-        <Route path="/gallery" exact component={Gallery}/>
-        <Route path="/contactus" exact component ={ContactUs}/>
-        <Route path="/contactus/admin" exact component ={ContactUsAdmin}/>
-        <Route path="/adminhome" exact component={AdminHome}/>
-        <Route path="/hotelpackagedetails/:id" exact component = {hotelpackagedetails}/>
-        <Route path="/services" exact component = {Services}/>
-        <Route path="/userhotelbooking/View" exact component = {SearchHotelBooking}/>
-        <Route path="/UserHotelBookingDetails/:id" exact component = {UserHotelBookingDetails}/>
+                <Route path ="/" exact element={<HomePage/>}/>
+                <Route path="/adminhotelbooking" exact element = {<Adminhotelbooking/>}/>
+                <Route path="/userhotelbooking/hotelbookingdetails/:id" exact element = {<Hotelbookingdetails/>}/>
+                <Route path="/addnewhotelbooking/:id" exact element = {<Addnewhotelbooking/>}/>
+                <Route path="/edithotelbooking/:id" exact element = {<Edithotelbooking/>}/>
+                <Route path="/hotelpackage" exact element = {<Hotelpackage/>}/>
+                <Route path="/adminhotelpackage" exact element = {<Adminhotelpackage/>}/>
+                <Route path="/adminaddhotelpackage" exact element = {<Adminaddhotelpackage/>}/>
+                <Route path="/adminedithotelpackage/:id" exact element = {<Adminedithotelpackage/>}/>
+                <Route path="/adminhotelpackagedetails/:id" exact element = {<Adminhotelpackagedetails/>}/>
+                {/*<Route path="/gallery" exact element={Gallery}/>*/}
+                {/*<Route path="/contactus" exact element ={ContactUs}/>*/}
+                {/*<Route path="/contactus/admin" exact element ={ContactUsAdmin}/>*/}
+                <Route path="/hotelpackagedetails/:id" exact element = {<Hotelpackagedetails/>}/>
+                {/*<Route path="/services" exact element = {Services}/>*/}
+                <Route path="/userhotelbooking/View" exact element = {<SearchHotelBooking/>}/>
+                {/*<Route path="/UserHotelBookingDetails/:id" exact element = {UserHotelBookingDetails}/>*/}
 
-      </Routes>
-    </div>
-  );
+
+                {/*payment*/}
+                <Route path="/view" element={<AllPayment/>}/>
+                <Route path='/update/:id' element={<EditPayment/>}/>
+                <Route path='/pay' element={[<Header/>,<br/>,<br/>,<Insertfunction/>, <Footer/>]} />
+
+
+                {/*<Route path="/" element={<Home />} />*/}
+                {/*<Route path="/" element={<Dashboard />} />*/}
+                <Route path="/package" element={[<Navbar/>, <Package />]} />
+                <Route path="/packagesecond" element={[<Navbar/>, <PackageSecond />]}/>
+                <Route path="/admincontact" element={[<Navbar/>, <AdminContact />]}/>
+                {/*<Route path="/adminpage" element={<Adminpage />} />*/}
+                <Route path="/update/:id" element={<UpdatePackage />} />
+
+
+
+                <Route path="/user-dashboard/:name" element={<UserDashbord/>}/>
+                <Route path="/user-dashboard/:name/profile/:id" element={<Profile/>}/>
+
+                <Route path="/login" element={[<Navbar />,<Login/>]} />
+                <Route path="/register" element={[<Navbar />,<Register/>]} />
+                <Route path="/forgotpassword" element={[<Navbar />,<ForgotPasword/>]} />
+                <Route path="/passwordreset/:resetToken" element={[<Navbar />,<ResetPassword/>]} />
+
+                {/*<Route path="/admin" element={<Adminpage />} />*/}
+
+            </Routes>
+        </div>
+    );
 }
 
 export default App;

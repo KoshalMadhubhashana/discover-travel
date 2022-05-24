@@ -3,14 +3,16 @@ import "../../../common/Styles/HeaderFooter.css";
 import HeaderAdmin from "../HeaderAdmin";
 import "../../../common/Styles/AdminHeader.css";
 
-function AdminHome() {
+function CommonAdminHome() {
   return (
     <div>
       <HeaderAdmin />
 
       <div
         style={{
-          backgroundColor: "hsla(90, 100%, 89%, 0.55)",
+          // marginLeft: "220px",
+          backgroundImage:
+              "url('https://img.freepik.com/free-vector/brick-wall-with-spot-lights-background_23-2148606997.jpg?size=626&ext=jpg')",
         }}
       >
         <div id="bodyadd">
@@ -18,12 +20,7 @@ function AdminHome() {
             <div>
               <div class="container">
                 <div
-                  class="row"
-                  style={{
-                    backgroundImage:
-                      "url('https://img.freepik.com/free-vector/brick-wall-with-spot-lights-background_23-2148606997.jpg?size=626&ext=jpg')",
-                  }}
-                >
+                  class="row">
                   <div class="col-lg-10 col-xl-auto mx-auto">
                     <div
                       class="card flex-row my-3 border-5 shadow rounded-5 overflow-hidden"
@@ -112,6 +109,12 @@ function AdminHome() {
                     </div>
                   </div>
                 </div>
+                <div
+                    className="row"
+                    style={{
+                      height: "450px",
+                    }}
+                ></div>
               </div>
             </div>
           </div>
@@ -121,4 +124,4 @@ function AdminHome() {
   );
 }
 
-export default AdminHome;
+export default CommonAdminHome;

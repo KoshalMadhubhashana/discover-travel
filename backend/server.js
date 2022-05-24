@@ -30,6 +30,8 @@ app.listen(PORT, () => {
 app.use("/activity", require("./routes/activity/Activity"));
 
 app.use("/travel", require("./routes/air_ticket/AirTicket"));
+app.use("/bookFlight", require("./routes/air_ticket/BookFlight"));
+app.use("/mybooking", require("./routes/air_ticket/MyBooking"));
 
 app.use("/api/guid", require("./routes/guide/GuideRoute"));
 app.use("/contactGuid", require("./routes/guide/ContactGuide"));

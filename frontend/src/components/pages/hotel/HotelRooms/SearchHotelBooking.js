@@ -3,8 +3,8 @@ import axios from "axios";
 import hotelimg from '../../../../assets/simple-house-logo.png'
 import luxurious from '../../../../assets/hotelhome.jpg'
 import '../../../common/Styles/HotelRoomStyle.css'
-import Header from '../Header';
-import Footer from '../Footer';
+import Navbar from "../../../common/navbar/navbar";
+import Footer from "../../../common/footer/footer";
 
 
 
@@ -57,7 +57,7 @@ export default function SearchBooking (){
     return(
 
       <div>
-        <Header/>
+        <Navbar/>
           <div className="info">
             <div class="parallax-window" data-parallax="scroll" data-image-src="img/simple-house-01.jpg">
               <img src={luxurious} alt="Logo" class="shimg" />

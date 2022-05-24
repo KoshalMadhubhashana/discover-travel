@@ -9,14 +9,14 @@ class Navbar extends Component {
       <header>
         <ul className="navbar-items">
           <li>
-            <a>Discover Travel</a>
+            <Link to={"/"}>Discover Travel</Link>
           </li>
           <li>
             {/*<a>Air Ticket</a>*/}
             <Link to={"/bookflight"}>Air Ticket</Link>
           </li>
           <li>
-            <Link to={"/"}>Hotels</Link>
+            <Link to={"/hotelpackage"}>Hotels</Link>
           </li>
           <li>
             <a>Travel Package</a>
@@ -28,16 +28,19 @@ class Navbar extends Component {
             <Link to={"/activitiesPage"}>Activity</Link>
           </li>
           <li>
-            <a>Insurance</a>
+            <Link to={"/package"}>Insurance</Link>
           </li>
         </ul>
         <div>
+          <Link to={"/login"}>
           <button id="sign_in_btn" className="btn_header">
             Sign In
-          </button>
+          </button></Link>
+          <Link to={"/register"}>
           <button id="register_btn" className="btn_header">
             Register
           </button>
+          </Link>
         </div>
       </header>
     );

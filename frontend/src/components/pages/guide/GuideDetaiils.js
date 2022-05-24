@@ -64,7 +64,7 @@ const GuideDetaiils = () => {
                       <div className="mt-4">
                         {" "}
                         <NavLink to={`/contactguide/${value._id}`}>
-                        <Button type="primary" className="mybtn-primary">Contact Guide</Button>
+                        <button type="primary" className="btn mybtn-primary">Contact Guide</button>
                         </NavLink>
                       </div>
                     </Card>

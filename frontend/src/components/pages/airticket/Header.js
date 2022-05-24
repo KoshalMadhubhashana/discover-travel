@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "antd";
+// import { Button } from "antd";
 import { useNavigate } from "react-router-dom";
 import { HomeTwoTone } from "@ant-design/icons";
 import "../../common/Styles/common.css";
@@ -15,16 +15,22 @@ const Header = () => {
         </div>
         <div className="pt-4 flex">
           <div className="mx-auto -translate-x-6 gap-4">
-            <Button className="mybtn-primary" type="primary" onClick={() => history("/bookflight")}>
+            <button className="btn mybtn-primary" type="primary" onClick={() => history("/bookflight")}>
               Book a Flight
-            </Button>{" "}
-            <Button className="mybtn-primary" type="primary" onClick={() => history("/addtraveldetails")}>
+            </button>{" "}
+            <button className="btn mybtn-primary" type="primary" onClick={() => history("/mybooking")}>
+              My Booking
+            </button>{" "}
+            <button className="btn mybtn-primary" type="primary" onClick={() => history("/addtraveldetails")}>
               Add Travel Details
-            </Button>{" "}
-            <Button className="mybtn-primary"
+            </button>{" "}
+            <button  className="btn mybtn-primary"
                     type="primary" onClick={() => history("/traveldetails")}>
               Travel Details
-            </Button>
+            </button>
+            <button  className="btn mybtn-primary" type="primary" onClick={() => history("/reviewbooking")}>
+              Review Booking
+            </button>
           </div>
         </div>
       </div>

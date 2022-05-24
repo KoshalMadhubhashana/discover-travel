@@ -22,6 +22,8 @@
     font-family: "Aldrich", sans-serif;
 }
 
+
+
 .mybtn-primary:hover{
     color: white;
     background: #6369d1;
@@ -63,7 +65,7 @@
 .mybtn-danger:hover {
     color: white;
     background: #CC444B;
-    border: #CC444B;
+    border: 2px solid #CC444B;
 }
 
 .gridbox{
@@ -75,4 +77,51 @@
 .ant-card {
     border-radius: 6px;
     box-shadow: 0 0px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.bg-back{
+    /*position: relative;*/
+    margin-top: 50px;
+    width: 100%;
+    min-height: calc(100vh - 137px);
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bg-back h2 {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.payment{
+    width: 70%!important;
+    color: #000;
+    font-weight: bolder;
+    padding: 1%;
+    background-clip: border-box;
+}
+
+.btn-container {
+display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn-container button{
+    min-height: 36px;
+}
+
+.card-container {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 10px;
+    display: flex;
+}
+
+.card-container>div{
+    width: 20%;
+    padding: 10px;
 }

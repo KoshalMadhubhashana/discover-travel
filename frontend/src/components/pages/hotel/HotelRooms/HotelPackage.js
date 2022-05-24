@@ -8,6 +8,7 @@ import { Col } from 'react-bootstrap';
 import '../../../common/Styles/HotelRoomStyle.css'
 import Header from '../Header';
 import Footer from '../Footer';
+import Navbar from "../../../common/navbar/navbar";
 
 export default class hotelpackage extends Component{
 
@@ -64,7 +65,7 @@ export default class hotelpackage extends Component{
     render(){
       return(
         <div>
-          <Header/>
+          <Navbar/>
             <div className="info">
               <div class="parallax-window" data-parallax="scroll" data-image-src="img/simple-house-01.jpg">
                 <img src={luxurious} alt="Logo" class="shimg" />
@@ -77,7 +78,7 @@ export default class hotelpackage extends Component{
                               <h1 class="tm-site-title" style={{fontFamily: "Calibri"}}>Rooms</h1>
                               <div className="col-lg-3 mt-2 mb-2">
                                 <input
-                                style={{fontFamily: "Calibri"}}
+                                style={{fontFamily: "Calibri", color: "black"}}
                                   className="from-control"
                                   id="hotelse"
                                   type="search"

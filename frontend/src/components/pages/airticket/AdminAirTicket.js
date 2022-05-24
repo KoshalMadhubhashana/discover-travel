@@ -5,9 +5,10 @@ import {Button} from "antd";
 
 import {NavLink} from "react-router-dom";
 import Footer from "../../common/footer/footer";
+import HeaderAdmin from "../hotel/HeaderAdmin";
 
 
-const Adminpage = () => {
+const AdminAirTicket = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -32,11 +33,8 @@ const Adminpage = () => {
 
     return (
         <div>
-            <div className=" container mx-auto">
-                <div
-                    className="p-2 text-center text-5xl mt-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-md justify-content-center mx-auto">
-                    Hello' Admin
-                </div>
+            <HeaderAdmin/>
+            <div className="card" style={{ margin: "10px 10px 10px 250px"}}>
                 <center>
                     <div>
                         <h1 className=" text-4xl mt-20">All Travel Details</h1>
@@ -160,9 +158,9 @@ const Adminpage = () => {
                                     </table>
                                     <div className=" mt-6 float-right mr-32">
                                         <NavLink to="/dashbord">
-                                            <Button type="primary" danger>
+                                            <button type="primary" danger className="btn mybtn-danger">
                                                 Back
-                                            </Button>
+                                            </button>
                                         </NavLink>
                                     </div>
                                     <br/>
@@ -173,9 +171,8 @@ const Adminpage = () => {
                 </center>
             </div>
             <hr/>
-            <Footer/>
         </div>
     );
 };
 
-export default Adminpage;
+export default AdminAirTicket;

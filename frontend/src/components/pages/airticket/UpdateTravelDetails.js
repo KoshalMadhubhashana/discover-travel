@@ -19,6 +19,7 @@ import axios from "axios";
 import Api from "./apicountry";
 import Navbar from "../../common/navbar/navbar";
 import Footer from "../../common/footer/footer";
+import "../../common/Styles/common.css"
 
 const layout = {
     labelCol: {
@@ -149,12 +150,12 @@ const UpdateTravelDetails = () => {
         <div>
             <Navbar/>
             <div>
-                <div className="container mx-auto contact-bg">
+                <div className="container mx-auto mybg top-down">
                     <div className="flex justify-center mt-8 gap-28 mb-10 w-full">
-                        <div className=" border-2 text-center border-gray-900 px-56 admin-bg mt-10 mb-10">
+                        <div className=" border-2 text-center px-40 card mt-10 mb-10">
                             <div className="mb-10">
                                 <div className="mt-20 flex">
-                                    <div className=" -translate-x-6">
+                                    <div className="">
                                         <Form
                                             {...layout}
                                             form={form}
@@ -163,7 +164,7 @@ const UpdateTravelDetails = () => {
                                         >
                                             <div>
                                                 <div
-                                                    className=" font-semibold text-white text-xl -translate-x-16 mt-8 absolute">
+                                                    className=" font-semibold text-xl -translate-x-16 mt-8 absolute">
                                                     Traveller Name
                                                 </div>
                                                 <Form.Item
@@ -222,7 +223,7 @@ const UpdateTravelDetails = () => {
 
                                             <div className="mt-20">
                                                 <div
-                                                    className=" font-semibold text-white text-xl -translate-x-16 mt-8 absolute">
+                                                    className=" font-semibold text-xl -translate-x-16 mt-8 absolute">
                                                     Passport Details
                                                 </div>
                                                 <div className=" flex ml-48 translate-x-12">
@@ -325,7 +326,7 @@ const UpdateTravelDetails = () => {
 
                                             <div className="mt-20">
                                                 <div
-                                                    className=" font-semibold text-white text-xl -translate-x-16 mt-8 absolute">
+                                                    className=" font-semibold text-xl -translate-x-16 mt-8 absolute">
                                                     Contact Details
                                                 </div>
                                                 <Form.Item
@@ -416,7 +417,7 @@ const UpdateTravelDetails = () => {
 
                                             <Form.Item {...tailLayout}>
                                                 <div className="flex ml-40 px-32 mt-8">
-                                                    <Button type="primary" htmlType="submit">
+                                                    <button type="primary" htmlType="submit" className="btn mybtn-primary">
                                                         {loading ? (
                                                             <>
                                                                 <Spin/> Update...
@@ -424,7 +425,7 @@ const UpdateTravelDetails = () => {
                                                         ) : (
                                                             "Update"
                                                         )}
-                                                    </Button>{" "}
+                                                    </button>{" "}
                                                 </div>
                                             </Form.Item>
                                         </Form>
@@ -436,9 +437,9 @@ const UpdateTravelDetails = () => {
                 </div>
                 <div className=" -translate-y-9 float-right mr-24">
                     <NavLink to="/traveldetails">
-                        <Button type="primary" danger>
+                        <button type="primary" className="btn mybtn-danger">
                             Back
-                        </Button>
+                        </button>
                     </NavLink>
                 </div>
             </div>

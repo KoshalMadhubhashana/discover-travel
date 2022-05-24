@@ -392,7 +392,7 @@ const AddTravelDetails = () => {
 
                     <Form.Item {...tailLayout}>
                       <div className="flex ml-40 mt-8">
-                        <Button className="mybtn-primary btn-submit" type="primary" htmlType="submit">
+                        <button className="btn mybtn-primary btn-submit" type="primary" htmlType="submit">
                           {loading ? (
                             <>
                               <Spin /> Submiting...
@@ -400,7 +400,7 @@ const AddTravelDetails = () => {
                           ) : (
                             "Submit"
                           )}
-                        </Button>{" "}
+                        </button>{" "}
                       </div>
                     </Form.Item>
                   </Form>

@@ -1,6 +1,8 @@
 .form-container{
     background-color: #f6f6f3;
-    margin: 150px auto;
+    position: relative;
+    top: 150px;
+    margin: 0 auto!important;
     padding: 20px;
     display: flex;
     width: 680px;

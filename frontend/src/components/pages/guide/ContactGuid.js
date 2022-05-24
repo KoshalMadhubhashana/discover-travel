@@ -102,7 +102,7 @@ const ContactGuid = () => {
                 )}
                 <Form.Item>
                   <div className=" float-right mt-2 -translate-x-56">
-                    <Button type="primary" htmlType="submit" className="mybtn-primary btn-submit">
+                    <button type="primary" htmlType="submit" className="btn mybtn-primary btn-submit">
                       {loading ? (
                         <>
                           <Spin /> Sending..
@@ -110,7 +110,7 @@ const ContactGuid = () => {
                       ) : (
                         "Send"
                       )}
-                    </Button>{" "}
+                    </button>{" "}
                     {error && (
                       <span className="error-message" style={{ color: "red" }}>
                         {error}
