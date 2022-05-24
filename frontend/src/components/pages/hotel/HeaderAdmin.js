@@ -55,14 +55,14 @@ function HeaderAdmin() {
                     </li>
                     <li>
                         <a
-                            //href="/guide"
+                            href="/user-dashboard/a/profile/null"
                         >
                             <i class="fa fa-user" aria-hidden="true"></i> Guide
                         </a>
                     </li>
                     <li>
                         <a
-                            href="/admincontact"
+                            href="/insuranceadmin"
                         >
                             <i className="fa fa-user" aria-hidden="true"></i> Insurance
                         </a>

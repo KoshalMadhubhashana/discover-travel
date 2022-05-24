@@ -81,7 +81,7 @@ const AdminContact = () => {
   return (
     <div className="container mx-auto top-down">
       <div className="flex justify-center mt-8 gap-28 mb-10 w-full" style={{flexDirection: "row"}}>
-        <div className="mycard text-center">
+        <div className="mycard mybg text-center">
           <div className="mt-4 text-xl font-semibold text-lime-400">Contact Numbers</div>
           <div className="  justify-center gap-32 px-10 py-10">
             <div className=" text-lg">Official Contact Number</div>
@@ -92,7 +92,7 @@ const AdminContact = () => {
             <div className=" text-lg ">0111123456</div>
           </div>
         </div>
-        <div className="text-center px-32 mycard">
+        <div className="text-center px-32 mycard mybg">
           <div className="mb-10">
             <div className="mt-20 flex">
               <div className=" flex-row mt-6" style={{width:"150px"}}>

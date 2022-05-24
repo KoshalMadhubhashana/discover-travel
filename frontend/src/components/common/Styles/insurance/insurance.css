@@ -32,3 +32,13 @@
     border: none;
     /*box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);*/
 }
+
+.mybg{
+    border-radius: 4px;
+    width: 100%;
+    /*background: #e8ebf7;*/
+    background: #f3f4f8f0;
+    /*background: rgb(238, 238, 238);*/
+    border: none;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+}

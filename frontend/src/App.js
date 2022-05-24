@@ -56,6 +56,7 @@ import MyBooking from "./components/pages/airticket/MyBooking";
 import ReviewBooking from "./components/pages/airticket/ReviewBooking";
 import AdminAirTicket from "./components/pages/airticket/AdminAirTicket";
 import HomePage from "./components/pages/hotel/Home/HomePage";
+import InsuranceAdminpage from "./components/pages/insurance/InsuranceAdminpage";
 
 function App() {
     return (
@@ -129,13 +130,13 @@ function App() {
                 <Route path="/package" element={[<Navbar/>, <Package />]} />
                 <Route path="/packagesecond" element={[<Navbar/>, <PackageSecond />]}/>
                 <Route path="/admincontact" element={[<Navbar/>, <AdminContact />]}/>
-                {/*<Route path="/adminpage" element={<Adminpage />} />*/}
+                <Route path="/insuranceadmin" element={<InsuranceAdminpage />} />
                 <Route path="/update/:id" element={<UpdatePackage />} />
 
 
 
-                <Route path="/user-dashboard/:name" element={<UserDashbord/>}/>
-                <Route path="/user-dashboard/:name/profile/:id" element={<Profile/>}/>
+                <Route path="/userdashboard/:name" element={<UserDashbord/>}/>
+                <Route path="/userdashboard/:name/profile/:id" element={<Profile/>}/>
 
                 <Route path="/login" element={[<Navbar />,<Login/>]} />
                 <Route path="/register" element={[<Navbar />,<Register/>]} />

@@ -7,6 +7,8 @@ import Header from "./Header";
 
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import HeaderAdmin from "../hotel/HeaderAdmin";
+import "../../common/Styles/common.css";
 
 const layout = {
   labelCol: {
@@ -120,16 +122,17 @@ const Profile = () => {
 
   return (
     <>
-      <GuideNavbr />
+      <HeaderAdmin />
+        <div style={{marginLeft: "250px"}}>
       <Header/>
-      <div className="container mx-auto contact-bg">
+      <div className="container mx-auto mybg">
         <div className="flex justify-center mt-8 gap-28 mb-10 w-full">
-          <div className=" border-2 text-center border-gray-900 px-56 admin-bg bg-cover mt-10 mb-10">
+          <div className="text-center px-40 card mt-10 mb-10">
             <div className="mb-10">
               <div className="mt-20 flex">
                 <div className=" -translate-x-48">
                   <div className="p-2 text-5xl translate-x-52 mb-8 mx-auto mt-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-md ">
-                    Update Guid Form
+                    Update Guide Form
                   </div>
                   <Form
                     {...layout}
@@ -361,7 +364,7 @@ const Profile = () => {
                       <div>
                         <Form.Item {...tailLayout}>
                           <div className="  mt-8">
-                            <Button type="primary" htmlType="submit">
+                            <button type="primary" htmlType="submit" className="btn mybtn-primary">
                               {loading ? (
                                 <>
                                   <Spin /> Update...
@@ -369,7 +372,7 @@ const Profile = () => {
                               ) : (
                                 "Update"
                               )}
-                            </Button>{" "}
+                            </button>{" "}
                           </div>
                         </Form.Item>
                       </div>
@@ -383,6 +386,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
+        </div>
     </>
   );
 };

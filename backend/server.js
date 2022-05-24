@@ -45,4 +45,4 @@ app.use("/hotelpackage", require("./routes/hotel/HotelPackage"));
 app.use("/payment", require("./routes/payment/payments.js"));
 
 app.use("/insuarance", require("./routes/insurance/Insuarance"));
-// app.use("/admin", require("./routes/insurance/Admin"));
+app.use("/admin", require("./routes/insurance/Admin"));

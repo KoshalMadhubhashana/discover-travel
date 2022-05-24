@@ -3,6 +3,10 @@ import React, {useState,useEffect} from "react";
 import GuideNavbr from "./GuideNavbar";
 import Header from "./Header";
 import { Card, Col, Row } from 'antd';
+import CommonAdminHome from "../hotel/Home/CommonAdminHome";
+import HeaderAdmin from "../hotel/HeaderAdmin";
+import "../../common/Styles/common.css"
+
 const Inbox = () => {
 
     const [data, setData] = useState([]);
@@ -22,11 +26,12 @@ const Inbox = () => {
     return (
         <div>
 
-            <GuideNavbr />
+            <HeaderAdmin />
+            <div style={{margin:"10px 10px 10px 240px"}}>
             <Header />
 
-            <div className=" container mx-auto " >
-                <div className="site-card-wrapper border-2 p-4 mt-4 border-blue-700">
+            <div className=" container mx-auto card"  style={{margin:"30px 0"}}>
+                <div className="site-card-wrapper border-2 p-4 mt-4 mybg">
                     <Row gutter={16}>
                         {data.map((value) => {
                             return(
@@ -44,6 +49,7 @@ const Inbox = () => {
                        
                     </Row>
                 </div>
+            </div>
             </div>
             <br/><br/>
         </div>
