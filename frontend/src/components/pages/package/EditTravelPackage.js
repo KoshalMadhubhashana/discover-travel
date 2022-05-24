@@ -2,6 +2,7 @@ import React, { useReducer, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../../common/Styles/TravelPackage.css";
+import HeaderAdmin from "../hotel/HeaderAdmin";
 //import HeaderAdmin from "../HeaderAdmin";
 
 const EditPackage = (props) => {
@@ -46,9 +47,11 @@ const EditPackage = (props) => {
     setPerperson("");
     setFileName("");
 
+    const  id = window.location.href.split("http://localhost:3000/travelpackage/admin/edit/")[1]
+
     axios
       .put(
-        `http://localhost:8070/travelpackages/admin/update/${props.match.params.id}`,
+        `http://localhost:8070/travelpackages/admin/update/${id}`,
         formData
       )
       .then((res) => setMessage(res.data))
@@ -61,9 +64,11 @@ const EditPackage = (props) => {
   };
 
   useEffect(() => {
+    const  id = window.location.href.split("http://localhost:3000/travelpackage/admin/edit/")[1]
+
     axios
       .get(
-        `http://localhost:8070/travelpackages/admin/${props.match.params.id}`
+        `http://localhost:8070/travelpackages/admin/${id}`
       )
       .then((res) => [
         setPackagename(res.data.post.packageName),
@@ -82,9 +87,9 @@ const EditPackage = (props) => {
   return (
     <div>
       
-
+<HeaderAdmin/>
       <div className="infoadmin">
-        <div className="bodyaa" id="bodytbc">
+        <div className="bodyaa mybg" id="bodytbc">
           <div>
             <div>
               <form
@@ -92,7 +97,7 @@ const EditPackage = (props) => {
                 onSubmit={changeOnClick}
                 encType="multipart/form-data"
               >
-                <div class="form-header form-headertr">
+                <div class="form-header form-headertr ">
                   <h1 style={{ color: "white" }}>
                     <b>Edit Travel Package Details</b>
                   </h1>

@@ -41,10 +41,9 @@ class ComponentToPrint extends React.Component {
       <div>
         <HeaderAdmin/>
         <div
-          className="infoadmin"
+          className="infoadmin container  mybg"
           style={{
-            backgroundImage:
-              "url('https://wallpaperaccess.com/full/2040050.jpg')",
+            margin: "20px 20px 20px 250px",
             minHeight: "700px",
           }}
         >
@@ -58,20 +57,14 @@ class ComponentToPrint extends React.Component {
                 paddingTop: "10px",
               }}
             >
-              <div class="form-outline mb-2 ">
-                <h2 style={{ marginInlineStart: "60px" }}>
-                  {" "}
-                  <b>Package Booking Details</b>
-                </h2>
-              </div>
+
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <div class="form-outline mb-2 ">
+              <div class="mb-2 ">
                 <ReactToPrint
                   trigger={() => (
                     <button
                       type="button"
                       class="btn btn-danger"
-                      style={{ marginInlineStart: "380%" }}
                     >
                       <i class="fas fa-print mr-2"></i>Print this out!
                     </button>

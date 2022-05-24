@@ -19,7 +19,7 @@ class Navbar extends Component {
             <Link to={"/hotelpackage"}>Hotels</Link>
           </li>
           <li>
-            <a>Travel Package</a>
+            <Link to="/travelpackages">Travel Package</Link>
           </li>
           <li>
             <Link to={"/guidedetails"}>Guide</Link>

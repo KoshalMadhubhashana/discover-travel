@@ -62,16 +62,16 @@ function HeaderAdmin() {
                     </li>
                     <li>
                         <a
-                            href="/insuranceadmin"
+                            href="/travelpackages/admin"
                         >
-                            <i className="fa fa-user" aria-hidden="true"></i> Insurance
+                            <i className="fa fa-user" aria-hidden="true"></i> Travel Package
                         </a>
                     </li>
                     <li>
                         <a
-                            href="/allbooking"
+                            href="/insuranceadmin"
                         >
-                            <i className="fa fa-user" aria-hidden="true"></i> Bookings
+                            <i className="fa fa-user" aria-hidden="true"></i> Insurance
                         </a>
                     </li>
                     <li>

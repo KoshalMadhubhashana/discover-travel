@@ -46,3 +46,8 @@ app.use("/payment", require("./routes/payment/payments.js"));
 
 app.use("/insuarance", require("./routes/insurance/Insuarance"));
 app.use("/admin", require("./routes/insurance/Admin"));
+
+
+app.use("/travelpackages",require("./routes/package/travelPackage.js"));
+app.use("/packagebooking",require("./routes/package/Packagebooking.js"));
+app.use('/travelpackage/review', require('./routes/package/TravelPackageRating'));

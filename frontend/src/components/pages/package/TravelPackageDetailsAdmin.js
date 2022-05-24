@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useParams, useHistory } from "react-router-dom";
 import "../../common/Styles/TravelPackage.css";
+import "../../common/Styles/common.css";
+import HeaderAdmin from "../hotel/HeaderAdmin";
 //import HeaderAdmin from "../HeaderAdmin";
 
 const PackageDetailsAdmin = () => {
@@ -16,7 +18,7 @@ const PackageDetailsAdmin = () => {
     perperson: "",
   });
 
-  const { id } = useParams();
+  const  id = window.location.href.split("http://localhost:3000/travelpackages/travelpackage/admin/")[1]
 
   const loadPackage = async () => {
     const res = await axios.get(
@@ -41,30 +43,14 @@ const PackageDetailsAdmin = () => {
   return (
     <div>
       
-
+<HeaderAdmin/>
       <div
-        className="infoadmin"
+        className="infoadmin mybg"
         style={{
-          backgroundImage:
-            "url('https://www.teahub.io/photos/full/236-2363698_euro-trip-map-camera-travel-wanderlust-vintage-map.jpg')",
           minHeight: "600px",
         }}
       >
         <div className="container">
-          <small class="text-muted" style={{ marginInlineStart: "2%" }}>
-            <button
-              type="submit"
-              class="btn btn-primary"
-              style={{ width: "100px", marginTop: "20px" }}
-            >
-              <a
-                href="/travelpackages/admin"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                <i class="fas fa-angle-left mr-2"></i>Back
-              </a>
-            </button>
-          </small>{" "}
           <br />
           <br />
           <div
@@ -130,7 +116,7 @@ const PackageDetailsAdmin = () => {
                         <button
                           data-bs-toggle="modal" data-bs-target="#exampleModal"
                           type="submit"
-                          class="btn btn-danger"
+                          class="btn mybtn-danger"
                           style={{ width: "140px", fontSize: "16px" }}
                         >
                           Delete Package
@@ -169,7 +155,7 @@ const PackageDetailsAdmin = () => {
                       <small class="text-muted">
                         <button
                           type="submit"
-                          class="btn btn-danger"
+                          class="btn mybtn-primary"
                           style={{ width: "130px", fontSize: "16px" }}
                         >
                           <a

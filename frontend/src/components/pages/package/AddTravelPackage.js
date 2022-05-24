@@ -2,6 +2,7 @@ import React, { useReducer, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../../common/Styles/TravelPackage.css";
+import HeaderAdmin from "../hotel/HeaderAdmin";
 //import HeaderAdmin from "../HeaderAdmin";
 
 const CreatePackage = () => {
@@ -57,7 +58,7 @@ const CreatePackage = () => {
   };
   return (
     <div>
-     
+     <HeaderAdmin/>
 
       <div className="infoadmin">
         <div className="bodyaa" id="bodytbc">

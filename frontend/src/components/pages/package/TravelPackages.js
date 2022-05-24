@@ -5,7 +5,8 @@ import "../../common/Styles/TravelPackage.css";
 //import Navbar from "./components/Travel_Packages/navbar.";
 //import Footer from "../../components/Travel_Packages/footer.";
 import Reactstars from "react-rating-stars-component";
-
+import Navbar from "../../common/navbar/navbar";
+import "../../common/Styles/common.css"
 
 export default class CardItemsT extends Component {
   constructor(props) {
@@ -53,8 +54,8 @@ export default class CardItemsT extends Component {
   render() {
     return (
       <div>
-        
-        <div className="infotr bodytravelpackage">
+        <Navbar/>
+        <div className="mybg bodytravelpackage">
           <div className="bodytravelpackage, container" id="bbimg">
             <div>
               <br />
@@ -121,7 +122,7 @@ export default class CardItemsT extends Component {
                 </div>
               </div>
               <hr />
-           <p className="mb-2">   Sri Lanka which is been kmown as the pearl of the Indian ocean is an Island
+           <p className="mb-2" style={{marginTop: "200px"}}>   Sri Lanka which is been kmown as the pearl of the Indian ocean is an Island
               with fascinating places to visit.Country has a great history and it is specially  well knowned for 
               it's own speiallities such as tea,rubber and coconut.The geographical location of the country includes
              coastal plains in the interior.The physical enviroment of wide ranging diversity makes Sri Lanka one of 
@@ -142,7 +143,7 @@ export default class CardItemsT extends Component {
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               
-              <h1><b>Our Travel Packages</b></h1>
+              <h1 style={{fontSize: 30}}><b>Our Travel Packages</b></h1>
            
                     <input
                       id="search-input"
@@ -157,6 +158,7 @@ export default class CardItemsT extends Component {
                   <button
                     id="search-button"
                     type="button"
+                    style={{width: 40, height: 40}}
                     class="btn btn-primary"
                   >
                     <i class="fas fa-search"></i>

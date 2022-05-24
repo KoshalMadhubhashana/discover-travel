@@ -1,5 +1,5 @@
 const express = require('express');
-const ReviewData = require('../models/TravelPackageRating');
+const ReviewData = require('../../models/TravelPackageRating');
 
 const router =express.Router();
 

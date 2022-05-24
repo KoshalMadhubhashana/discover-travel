@@ -3,6 +3,8 @@ import axios from "axios";
 import "../../common/Styles/TravelPackage.css";
 import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
+import HeaderAdmin from "../hotel/HeaderAdmin";
+import "../../common/Styles/common.css";
 //import HeaderAdmin from "../HeaderAdmin";
 export default class AllPackagesAdmin extends Component {
   constructor(props) {
@@ -58,19 +60,15 @@ export default class AllPackagesAdmin extends Component {
   render() {
     return (
       <div>
-        
+        <HeaderAdmin/>
         <div
           className="infoadmin"
-          style={{
-            backgroundImage:
-              "url('https://swall.teahub.io/photos/small/208-2080994_traveling-around-the-world-map.jpg')",
-          }}
         >
           <div className="container">
             <br />
-            <div
+            <div className="mybg"
               style={{
-                backgroundColor: "hsla(90, 100%, 0%, 0.57)",
+                // backgroundColor: "hsla(90, 100%, 0%, 0.57)",
                 paddingBottom: "15px",
                 paddingTop: "15px",
               }}
@@ -99,20 +97,20 @@ export default class AllPackagesAdmin extends Component {
                 id="search-input"
                 type="search"
                 id="form1"
-                style={{marginLeft:"530px"}}
+                style={{marginLeft:"530px", width: "200px"}}
                 placeholder="Search Package"
                 onChange={this.handleSearchArea}
               />
-              <button id="search-button" type="button" class="btn btn-primary">
+              <button id="search-button" type="button" class="btn mybtn-primary">
                 <i class="fas fa-search"></i>
               </button>
             </div>
             <hr />
-            <Row xs={1} md={3} className="g-4 " id="by" class="rounded">
+            <Row xs={1} md={3} className="g-4 mt-4" id="by" class="rounded">
               {this.state.posts.map((posts, index) => (
                 <Col key={index}>
                   <div
-                    class="card"
+                    class="card mycard"
                     style={{
                       backgroundColor: "hsl(0,0%,100%,0.9)",
                       borderColor: "black",
@@ -136,7 +134,7 @@ export default class AllPackagesAdmin extends Component {
                       </p>
                       &nbsp;&nbsp;
                       <a
-                        className="btn btn-outline-primary"
+                        className="btn mybtn-primary"
                         href={`/travelpackages/travelpackage/admin/${posts.id}`}
                       >
                         <i className="fas fa-eye"></i>&nbsp;View
@@ -150,7 +148,7 @@ export default class AllPackagesAdmin extends Component {
                       </a>
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       <a
-                        className="btn btn-outline-danger"
+                        className="btn mybtn-danger"
                         href={`/travelpackage/admin/delete/${posts.id}`}
                       >
                         <i className="fas fa-trash-alt"></i>&nbsp;Delete
