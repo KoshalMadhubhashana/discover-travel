@@ -69,6 +69,13 @@ function HeaderAdmin() {
                     </li>
                     <li>
                         <a
+                            href="/allbooking"
+                        >
+                            <i className="fa fa-user" aria-hidden="true"></i> Bookings
+                        </a>
+                    </li>
+                    <li>
+                        <a
                             href="/view"
                         >
                             <i className="fa fa-user" aria-hidden="true"></i> Payments

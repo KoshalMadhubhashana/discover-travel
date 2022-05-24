@@ -8,6 +8,7 @@ import axios from "axios";
 import "./Styles/Admin.css";
 
 import { Link } from "react-router-dom";
+import Navbar from "../../common/navbar/navbar";
 
 const layout = {
   labelCol: {
@@ -24,7 +25,7 @@ const tailLayout = {
   },
 };
 
-const Login = () => {
+const GuideLogin = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -70,7 +71,7 @@ const Login = () => {
         if (data.username === "admin") {
           history("/admin");
         } else {
-          history(`/user-dashboard/${data.username}`);
+          history(`/user-dashboard/${data.username}/profile/${data.id}`);
         }
 
         setLoading(false);
@@ -92,9 +93,10 @@ const Login = () => {
   return (
     <>
       {" "}
-      <div className="container mx-auto contact-bg">
+      <Navbar/>
+      <div className="container mx-auto top-down mybg">
         <div className="flex justify-center mt-8 gap-28 mb-10 w-full">
-          <div className=" border-2 text-center border-gray-900 px-72 register-bg bg-cover mt-10 mb-10">
+          <div className=" card text-center px-72 mt-10 mb-10">
             <div className="mb-10">
               <div className="mt-20 flex">
                 <div className=" -translate-x-44">
@@ -105,18 +107,19 @@ const Login = () => {
                     onFinish={() => loginHandler("top")}
                   >
                     <div className=" mb-8 ml-28 font-semibold text-3xl  border-2 p-2 w-96 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl">
-                      Please Login 
+                      Guide Login
                     </div>
                     <div className=" absolute -translate-y-8 ml-96 translate-x-72">
                       <div className=" text-3xl font-semibold mb-2">NEW HERE?</div>
                       <div>
-                        <Button
+                        <button
                           type="primary"
                           danger
-                          onClick={() => history("/register")}
+                          className="btn mybtn-danger"
+                          onClick={() => history("/guide-register")}
                         >
                           Create An Account
-                        </Button>{" "}
+                        </button>{" "}
                       </div>
                     </div>
                     <div className=" -translate-x-52">
@@ -178,13 +181,13 @@ const Login = () => {
                       </Form.Item>
                     </div>
                     <Link to={"/forgotpassword"}>
-                      <div className=" text-gray-50 ml-10">
+                      <div className="ml-10">
                         Forgot password?
                       </div>
                     </Link>
                     <Form.Item {...tailLayout}>
                       <div className="flex  px-20 mt-8">
-                        <Button type="primary" htmlType="submit">
+                        <button type="primary" htmlType="submit" className="btn mybtn-primary">
                           {loading ? (
                             <>
                               <Spin /> Authenticating..
@@ -192,7 +195,7 @@ const Login = () => {
                           ) : (
                             "Sign In"
                           )}
-                        </Button>{" "}
+                        </button>{" "}
                         <p>
                           {error && (
                             <span
@@ -224,4 +227,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default GuideLogin;

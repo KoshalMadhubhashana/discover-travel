@@ -7,6 +7,7 @@ import { FileDoneOutlined, InfoCircleOutlined } from "@ant-design/icons";
 import axios from "axios";
 import "./Styles/Admin.css";
 import TextArea from "antd/lib/input/TextArea";
+import Navbar from "../../common/navbar/navbar";
 
 const layout = {
   labelCol: {
@@ -82,7 +83,7 @@ const Register = () => {
           description: "Create Account Successfully 😘",
           placement,
         });
-        history("/login");
+        history("/guide-login");
       }, 5000); //5seconds timeout
     } catch (error) {
       notification.error({
@@ -100,9 +101,10 @@ const Register = () => {
   const [form] = Form.useForm();
   return (
     <>
-      <div className="container mx-auto contact-bg">
+      <Navbar/>
+      <div className="container mx-auto mybg top-down">
         <div className="flex justify-center mt-8 gap-28 mb-10 w-full">
-          <div className=" border-2 text-center border-gray-900 px-72 register-bg bg-cover mt-10 mb-10">
+          <div className="text-center px-50 mt-10 mb-10">
             <div className="mb-10">
               <div className="mt-20 flex">
                 <div className=" -translate-x-44">
@@ -122,10 +124,10 @@ const Register = () => {
                       <div className=" text-3xl font-semibold">Management</div>
                       <div className=" text-3xl font-semibold mb-2">System</div>
                       <div>
-                        <NavLink to="/login">
-                          <Button type="primary" danger>
+                        <NavLink to="/guide-login">
+                          <button type="primary"  className="btn mybtn-danger">
                             Login
-                          </Button>{" "}
+                          </button>{" "}
                         </NavLink>
                       </div>
                     </div>
@@ -394,7 +396,7 @@ const Register = () => {
                     </div>
                     <Form.Item {...tailLayout}>
                       <div className="flex  px-20 mt-8">
-                        <Button type="primary" htmlType="submit">
+                        <Button type="primary" htmlType="submit" className="btn btn-lg mybtn-primary">
                           {loading ? (
                             <>
                               <Spin /> Creating..

@@ -58,6 +58,19 @@ import AdminAirTicket from "./components/pages/airticket/AdminAirTicket";
 import HomePage from "./components/pages/hotel/Home/HomePage";
 import InsuranceAdminpage from "./components/pages/insurance/InsuranceAdminpage";
 import GuideAdminpage from "./components/pages/guide/GuideAdminpage";
+import PackageBooking from "./components/pages/package/PackageBooking";
+import AllPackagesAdmin from "./components/pages/package/TravelPackagesAdmin";
+import CreatePackage from "./components/pages/package/AddTravelPackage";
+import PackageDetails from "./components/pages/package/TravelPackageDetails";
+import PackageDetailsAdmin from "./components/pages/package/TravelPackageDetailsAdmin";
+import EditPackage from "./components/pages/package/EditTravelPackage";
+import EditTPackage from "./components/pages/package/EditPackage2";
+
+import AllPackages from "./components/pages/package/TravelPackages";
+import AllBooking from './components/pages/package/BookingAllDetails';
+import DeletePackage from './components/pages/package/DeleteTravelPackage'
+import GuidSignUpForm from "./components/pages/guide/GuidSignUpForm";
+import GuideLogin from "./components/pages/guide/GuideLogin";
 
 function App() {
     return (
@@ -91,8 +104,8 @@ function App() {
                 <Route path="/user-dashboard/:username/inbox" element={<Inbox/>}/>
                 <Route path="/contactguide/:id" element={<ContactGuid/>}/>
                 <Route path="/guidedetails" element={<GuideDetaiils/>}/>
-                {/*<Route path="/login" element={[<NavBar/>, <Login/>]}/>*/}
-                {/*<Route path="/register" element={[<NavBar/>, <GuidSignUpForm/>]}/>*/}
+                <Route path="/guide-login" element={[<GuideLogin/>]}/>
+                <Route path="/guide-register" element={[<GuidSignUpForm/>]}/>
                 {/*<Route path="/forgotpassword" element={[<NavBar/>, <ForgotPasword/>]}/>*/}
                 {/*<Route path="/passwordreset/:resetToken" element={[<NavBar/>, <ResetPassword/>]}/>*/}
 
@@ -146,6 +159,18 @@ function App() {
 
                 <Route path="/admin" element={<CommonAdminHome />} />
 
+
+
+                <Route path="/bookingpackage/:id" exact element = {<PackageBooking/>}/>
+                <Route path="/travelpackages/admin" exact element = {<AllPackagesAdmin/>}/>
+                <Route path="/travelpackage/admin/add" exact element ={<CreatePackage/>}/>
+                <Route path="/travelpackages/travelpackage/:id" exact element ={<PackageDetails/>}/>
+                <Route path="/travelpackages/travelpackage/admin/:id" exact element ={<PackageDetailsAdmin/>}/>
+                <Route path="/travelpackage/admin/edit/:id" exact element ={<EditPackage/>}/>
+                <Route path="/travelpackages" exact element = {<AllPackages/>}/>
+                <Route path="/travelpackage/admin/delete/:id" exact element = {<DeletePackage/>}/>
+                <Route path="/edittpackage/:id" element= {<EditTPackage/>}/>
+                <Route path="/allbooking" exact element = {<AllBooking/>}/>
             </Routes>
         </div>
     );

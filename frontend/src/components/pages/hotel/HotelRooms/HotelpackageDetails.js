@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from "axios";
 import '../../../common/Styles/HotelRoomStyle.css'
 import '../../../common/AllPayment.css'
+import '../../../common/Styles/common.css'
 import Navbar from "../../../common/navbar/navbar";
 import Footer from "../../../common/footer/footer";
 
@@ -58,7 +59,7 @@ export default class HotelpackageDetails extends Component {
                                     <br></br>
                                     <br></br>
                                     <br></br>
-                                    <div class="row" id="bokrow">
+                                    <div class="row mybg" id="bokrow">
                                         <div class="col-md-6">
                                             <div class="mu-about-left">
                                                 <img class="detailsimg" style={{width: '100%', minWidth: 'unset'}}

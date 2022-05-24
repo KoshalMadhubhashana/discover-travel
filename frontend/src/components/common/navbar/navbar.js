@@ -41,6 +41,11 @@ class Navbar extends Component {
             Register
           </button>
           </Link>
+          <Link to={"/guide-login"}>
+            <button id="register_btn" className="btn_header">
+              Guide
+            </button>
+          </Link>
         </div>
       </header>
     );
