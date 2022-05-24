@@ -1,11 +1,13 @@
 
 .pay-back{
-    position: relative;
-    background-color: #fff;
-    top: 90px;
-    left: 0;
-    height: calc(100vh - 137px);
-
+    /*position: relative;*/
+    /*background-color: #fff;*/
+    /*top: 90px;*/
+    /*left: 0;*/
+    /*height: calc(100vh - 137px);*/
+    /*margin-left: 130px;*/
+    /*margin-left: 170px;*/
+    height: calc(100vh - 246px);
 
 }
 /*h3{

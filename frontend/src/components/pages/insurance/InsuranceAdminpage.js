@@ -117,7 +117,7 @@ const InsuranceAdminpage = () => {
                                                         {value.iCatergory}
                                                     </td>
                                                     <td class="text-2xl px-6 py-4 whitespace-nowrap border-r-4 border-sky-700">
-                                                        <NavLink to={`/update/${value._id}`}>
+                                                        <NavLink to={`/insurance-update/${value._id}`}>
                                                             <EditOutlined style={{color: "green"}}/>{" "}
                                                         </NavLink>
                                                         <DeleteOutlined

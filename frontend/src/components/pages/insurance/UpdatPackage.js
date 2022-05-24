@@ -5,6 +5,8 @@ import { NavLink, useParams } from "react-router-dom";
 import { FileDoneOutlined, InfoCircleOutlined } from "@ant-design/icons";
 
 import axios from "axios";
+import HeaderAdmin from "../hotel/HeaderAdmin";
+import "../../common/Styles/common.css"
 
 const layout = {
   labelCol: {
@@ -101,6 +103,7 @@ const UpdatePackage = () => {
 
   return (
     <>
+      <HeaderAdmin/>
       {loader === false ? (
         <center>
           <Spin style={{ marginTop: "150px" }} />
@@ -207,7 +210,7 @@ const UpdatePackage = () => {
             <Form.Item {...tailLayout}>
               &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
               <div className="flex ml-80">
-                <Button type="primary" htmlType="submit">
+                <button type="primary" htmlType="submit" className="btn mybtn-primary">
                   {loading ? (
                     <>
                       <Spin /> Updating in Progess...
@@ -215,10 +218,10 @@ const UpdatePackage = () => {
                   ) : (
                     "Update"
                   )}
-                </Button>{" "}
+                </button>{" "}
                 &nbsp;&nbsp;
                 <NavLink to="/adminpage">
-                  <Button type="primary">Back</Button>{" "}
+                  <button className="btn mybtn-danger" type="primary">Back</button>{" "}
                 </NavLink>
               </div>
             </Form.Item>

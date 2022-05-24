@@ -57,6 +57,7 @@ import ReviewBooking from "./components/pages/airticket/ReviewBooking";
 import AdminAirTicket from "./components/pages/airticket/AdminAirTicket";
 import HomePage from "./components/pages/hotel/Home/HomePage";
 import InsuranceAdminpage from "./components/pages/insurance/InsuranceAdminpage";
+import GuideAdminpage from "./components/pages/guide/GuideAdminpage";
 
 function App() {
     return (
@@ -95,7 +96,7 @@ function App() {
                 {/*<Route path="/forgotpassword" element={[<NavBar/>, <ForgotPasword/>]}/>*/}
                 {/*<Route path="/passwordreset/:resetToken" element={[<NavBar/>, <ResetPassword/>]}/>*/}
 
-                <Route path="/admin" element={<CommonAdminHome />} />
+                <Route path="/guide-admin" element={<GuideAdminpage />} />
 
                 {/*Hotel*/}
 
@@ -131,7 +132,7 @@ function App() {
                 <Route path="/packagesecond" element={[<Navbar/>, <PackageSecond />]}/>
                 <Route path="/admincontact" element={[<Navbar/>, <AdminContact />]}/>
                 <Route path="/insuranceadmin" element={<InsuranceAdminpage />} />
-                <Route path="/update/:id" element={<UpdatePackage />} />
+                <Route path="/insurance-update/:id" element={<UpdatePackage />} />
 
 
 
@@ -143,7 +144,7 @@ function App() {
                 <Route path="/forgotpassword" element={[<Navbar />,<ForgotPasword/>]} />
                 <Route path="/passwordreset/:resetToken" element={[<Navbar />,<ResetPassword/>]} />
 
-                {/*<Route path="/admin" element={<Adminpage />} />*/}
+                <Route path="/admin" element={<CommonAdminHome />} />
 
             </Routes>
         </div>

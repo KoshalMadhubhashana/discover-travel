@@ -5,7 +5,7 @@ import { Button } from "antd";
 
 import { NavLink } from "react-router-dom";
 
-const Adminpage = () => {
+const GuideAdminpage = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -160,4 +160,4 @@ const Adminpage = () => {
   );
 };
 
-export default Adminpage;
+export default GuideAdminpage;

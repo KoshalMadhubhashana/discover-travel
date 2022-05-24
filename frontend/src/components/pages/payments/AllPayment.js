@@ -4,6 +4,7 @@ import axios from "axios";
 import Navbar from "../../common/navbar/navbar";
 import Footer from "../../common/footer/footer";
 import "../../common/AllPayment.css";
+import HeaderAdmin from "../hotel/HeaderAdmin";
 
 
 export default function AllPayment() {
@@ -37,8 +38,8 @@ export default function AllPayment() {
 
 
     return (
-        <div>
-            <Navbar/>
+        <div style={{marginLeft: "220px"}}>
+            <HeaderAdmin/>
             <div className="pay-back">
                 <div className="two-head">
                     <h1 style={{fontSize: "20px", textAlign:"center"}}><b>All Payment Details</b></h1>

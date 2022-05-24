@@ -7,14 +7,14 @@ import UserLoggedStateNavbar from "../../../common/user-logged-state-navbar/user
 import AddActivityButton from "./components/add-activity/add-activity";
 import MultipleItemCarousel from "./components/multiple-item-carousel/multiple-item-carousel";
 import ActivityParagraph from "./components/paragraph/paragraph";
+import Navbar from "../../../common/navbar/navbar";
 
 function ActivityDetails() {
   return (
     <div>
-      <UserLoggedStateNavbar></UserLoggedStateNavbar>
+      <Navbar></Navbar>
       <MultipleItemCarousel></MultipleItemCarousel>
       <ActivityParagraph></ActivityParagraph>
-      <AddActivityButton></AddActivityButton>
       <hr />
       <Footer></Footer>
     </div>

@@ -55,7 +55,7 @@ function HeaderAdmin() {
                     </li>
                     <li>
                         <a
-                            href="/user-dashboard/a/profile/null"
+                            href="/guide-admin"
                         >
                             <i class="fa fa-user" aria-hidden="true"></i> Guide
                         </a>
