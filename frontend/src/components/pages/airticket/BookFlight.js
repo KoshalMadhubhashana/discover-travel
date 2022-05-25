@@ -318,11 +318,8 @@ const BookFlight = () => {
                             onChange={onChangeSelectclass}
                             value={selectClass}
                           >
-                            <Option value="Sri Lankan">Sri Lankan</Option>
-                            <Option value="Indian">Indian</Option>
-                            <Option value="Singaporean">Singaporean</Option>
-                            <Option value="Vietnamese">Vietnamese</Option>
-                            <Option value="Russians">Russians</Option>
+                            <Option value="Sri Lankan">Economic</Option>
+                            <Option value="Indian">Business</Option>
                           </Select>
                         </Form.Item>
                       </div>
