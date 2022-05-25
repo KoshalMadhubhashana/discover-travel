@@ -46,8 +46,8 @@ const AdminAddPackage = ()=>{
        .catch((err)=>{
            console.log(err);
        });
-       history.push("/adminhotelpackage");
        alert(" Hotel Package Added Successful")
+       history.push("/adminhotelpackage");
    };
 
         return(
