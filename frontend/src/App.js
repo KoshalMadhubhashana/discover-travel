@@ -118,6 +118,8 @@ function App() {
 
 
                 <Route path ="/" exact element={<HomePage/>}/>
+                <Route path ="/admin" exact element={<CommonAdminHome/>}/>
+
                 <Route path="/adminhotelbooking" exact element = {<Adminhotelbooking/>}/>
                 <Route path="/userhotelbooking/hotelbookingdetails/:id" exact element = {<Hotelbookingdetails/>}/>
                 <Route path="/addnewhotelbooking/:id" exact element = {<Addnewhotelbooking/>}/>
