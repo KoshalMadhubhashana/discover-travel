@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const Auth = require("../../models/auth")
 
-const { register , login , forgotpassword , resetpassword } = require("AuthController");
+const { register , login , forgotpassword , resetpassword } = require("./AuthController");
  
 //bellow routes map the controllers
 router.route("/register").post(register); // call the auth in controllers

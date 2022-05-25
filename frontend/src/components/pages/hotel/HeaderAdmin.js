@@ -81,6 +81,13 @@ function HeaderAdmin() {
                             <i className="fa fa-user" aria-hidden="true"></i> Payments
                         </a>
                     </li>
+                    <li>
+                        <a
+                            href="/user-admin"
+                        >
+                            <i className="fa fa-user" aria-hidden="true"></i> Users
+                        </a>
+                    </li>
                 </ul>
             </div>
 

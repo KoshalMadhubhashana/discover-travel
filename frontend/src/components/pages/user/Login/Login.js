@@ -67,7 +67,7 @@ const Login = () => {
           // set a 5seconds timeout for authentication
 
 
-          history(`/user-dashboard/${data.firstName}`);
+          history(`/userdashboard/${data.firstName}/profile/${data.id}`);
 
           setLoading(false);
           window.location.reload();

@@ -71,6 +71,9 @@ import AllBooking from './components/pages/package/BookingAllDetails';
 import DeletePackage from './components/pages/package/DeleteTravelPackage'
 import GuidSignUpForm from "./components/pages/guide/GuidSignUpForm";
 import GuideLogin from "./components/pages/guide/GuideLogin";
+import UserProfile from "./components/pages/user/User/UserProfile";
+import MyDashbord from "./components/pages/user/User/MyDashbord";
+import UserAdminpage from "./components/pages/user/UserAdminpage";
 
 function App() {
     return (
@@ -149,15 +152,15 @@ function App() {
 
 
 
-                <Route path="/userdashboard/:name" element={<UserDashbord/>}/>
-                <Route path="/userdashboard/:name/profile/:id" element={<Profile/>}/>
+                <Route path="/userdashboard/:name" element={<MyDashbord/>}/>
+                <Route path="/userdashboard/:name/profile/:id" element={<UserProfile/>}/>
 
                 <Route path="/login" element={[<Navbar />,<Login/>]} />
                 <Route path="/register" element={[<Navbar />,<Register/>]} />
                 <Route path="/forgotpassword" element={[<Navbar />,<ForgotPasword/>]} />
                 <Route path="/passwordreset/:resetToken" element={[<Navbar />,<ResetPassword/>]} />
 
-                <Route path="/admin" element={<CommonAdminHome />} />
+                <Route path="/user-admin" element={<UserAdminpage />} />
 
 
 

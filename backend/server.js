@@ -51,3 +51,5 @@ app.use("/admin", require("./routes/insurance/Admin"));
 app.use("/travelpackages",require("./routes/package/travelPackage.js"));
 app.use("/packagebooking",require("./routes/package/Packagebooking.js"));
 app.use('/travelpackage/review', require('./routes/package/TravelPackageRating'));
+
+app.use("/api/auth", require("./routes/user/Auth"));

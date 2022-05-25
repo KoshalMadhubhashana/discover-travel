@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "antd";
 import { PoweroffOutlined } from "@ant-design/icons";
-import logo from "../assets/logo.jpg";
+import logo from "../../../../assets/logo.jpg";
 
 import { NavLink, useParams } from "react-router-dom";
 

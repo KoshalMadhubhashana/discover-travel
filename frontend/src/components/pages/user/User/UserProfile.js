@@ -6,6 +6,8 @@ import UserNavbr from "./UserNavbar";
 
 import { useParams, useNavigate, NavLink } from "react-router-dom";
 import axios from "axios";
+import Navbar from "../../../common/navbar/navbar";
+import "../../../common/Styles/common.css";
 
 const layout = {
   labelCol: {
@@ -22,7 +24,7 @@ const tailLayout = {
   },
 };
 
-const Profile = () => {
+const UserProfile = () => {
   const history = useNavigate();
 
   const [firstName, setFirstname] = useState("");
@@ -120,10 +122,10 @@ const Profile = () => {
 
   return (
     <>
-      <UserNavbr />
-      <div className="container mx-auto contact-bg">
+      <Navbar />
+      <div className="container mx-auto mybg top-down">
         <div className="flex justify-center mt-8 gap-28 mb-10 w-full">
-          <div className=" border-2 text-center border-gray-900 px-56 admin-bg mt-10 mb-10">
+          <div className="text-center px-56 card mt-10 mb-10">
             <div className="mb-10">
               <div className="mt-20 flex">
                 <div className=" -translate-x-48">
@@ -287,7 +289,7 @@ const Profile = () => {
                       <div>
                         <Form.Item {...tailLayout}>
                           <div className="  mt-8">
-                            <Button type="primary" htmlType="submit">
+                            <button  className="btn mybtn-primary" type="primary" htmlType="submit">
                               {loading ? (
                                 <>
                                   <Spin /> Update...
@@ -295,16 +297,16 @@ const Profile = () => {
                               ) : (
                                 "Update"
                               )}
-                            </Button>{" "}
+                            </button>{" "}
                           </div>
                         </Form.Item>
                       </div>
                       <div>
                         <Form.Item {...tailLayout}>
                           <div className="  mt-8">
-                            <Button type="primary" onClick={deleteData}>
+                            <button className="btn mybtn-danger" type="primary" onClick={deleteData}>
                               Delete
-                            </Button>{" "}
+                            </button>{" "}
                           </div>
                         </Form.Item>
                       </div>
@@ -320,4 +322,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default UserProfile;
