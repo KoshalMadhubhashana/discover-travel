@@ -70,16 +70,16 @@ export default class HotelpackageDetails extends Component {
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="mu-about-right">
+                                            <div class="mu-about-right" style={{textAlign: 'left'}}>
                                                 <br></br>
                                                 <h2 class="detailstitle"
-                                                    style={{fontFamily: "Calibri"}}> {roomType}</h2><br></br>
-                                                <p>{details}</p>
-                                                <p class="detailsprice" style={{fontFamily: "Calibri"}}>Per Day:
+                                                    style={{fontFamily: "Calibri", textAlign: 'left'}}> {roomType}</h2><br></br>
+                                                <p style={{textAlign: 'left'}}>{details}</p>
+                                                <p class="detailsprice" style={{fontFamily: "Calibri", textAlign: 'left'}}>Per Day:
                                                     Rs {price}</p>
-                                                <p className="tm-gallery-price" style={{fontFamily: "Calibri"}}>Room
+                                                <p className="tm-gallery-price" style={{fontFamily: "Calibri",textAlign: 'left'}}>Room
                                                     Size: {size}</p>
-                                                <p style={{fontFamily: "Calibri"}}>Maximum people: {maxCapacity}</p>
+                                                <p style={{fontFamily: "Calibri",textAlign: 'left'}}>Maximum people: {maxCapacity}</p>
                                                 <button className="btn btn-primary" onClick={this.onSubmit}
                                                         style={{backgroundColor: "#192c3e", width: "20%"}}><a
                                                     style={{textDecoration: 'none', color: 'white'}}>Book Now</a>

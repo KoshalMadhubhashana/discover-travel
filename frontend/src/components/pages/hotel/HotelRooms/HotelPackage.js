@@ -133,15 +133,15 @@ export default class hotelpackage extends Component{
                       </Card>
                     </Col>*/
 
-                      <div className="card" style={{width: '100%', margin: 10}}>
-                        <div className="row no-gutters">
+                      <div className="card" style={{width: '100%', margin: 10, height: "max-content", maxHeight: "250px", overflow: "hidden"}}>
+                        <div className="row no-gutters" >
                           <div className="col-sm-5">
                             <Card.Img className="card-img" src={`/uploads/${posts.packageImage}`}  height={'100%'} alt="Suresh Dasari Card"/>
                           </div>
                           <div className="col-sm-7">
                             <div className="card-body">
                               <h5 className="card-title">{posts.roomType}</h5>
-                              <p className="card-text">
+                              <p className="card-text" style={{textAlign: 'left'}}>
                                 Per Day: Rs {posts.price}<br></br>
                                 Max Capacity: {posts.maxCapacity}
                               </p>

@@ -35,7 +35,7 @@ const Header = () => {
                                 "username"
                             )}/inbox`}
                         >
-                            <Button type="primary" className="btn mybtn-primary">My Details</Button>{" "}
+                            <Button type="primary" className="btn mybtn-primary">Inbox</Button>{" "}
                         </NavLink>
                     </div>
                 </div>

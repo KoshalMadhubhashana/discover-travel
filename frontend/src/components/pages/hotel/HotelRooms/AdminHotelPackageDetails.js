@@ -15,7 +15,8 @@ export default class adminhotelpackageDetails extends Component {
   }
 
   componentDidMount(){
-    const id = this.props.match.params.id;
+    // const id = this.props.match.params.id;
+    const id = window.location.href.split("http://localhost:3000/adminhotelpackagedetails/")[1];
     axios.get(`http://localhost:8070/hotelpackage/read/${id}`).then((res)=>{
       if (res.data.success){
          this.setState({
