@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { Form,Button,Col,Row,InputGroup } from "react-bootstrap";
 import "../../common/Styles/TravelPackage.css";
+import Navbar from "../../common/navbar/navbar";
 //import Header from "../Header";
 //import Footer from "../Footer";
 
@@ -73,8 +74,8 @@ else{
     };
 
     await axios.post("http://localhost:8070/packagebooking/add", data);
-    alert("Booking Added Successfull. Click Ok to Pay");
-    history.push(`/payment/add-package/${id}`);
+    // alert("Booking Added Successfull. Click Ok to Pay");
+        window.location.href= `/pay/${data.price}`;
   }
   setValidated(true);
   };
@@ -84,11 +85,11 @@ else{
   const { packageName, perperson } = tpackage;
   return (
     <div>
-      
+      <Navbar/>
       <div className="infotr">
         <hr/>
         <div className="bodyaa" style={{ paddingTop: "10px" }}>
-          <div className="bodybb">
+          <div className="bodybb mybg" style={{backgroundColor:"#e8ebf7"}}>
             <div className="container">
               <div className="w-70 mx-auto shadow p-3">
                 <div className="bodycc">
@@ -264,7 +265,7 @@ else{
 
                   <br />
 
-                  <button type="submit" class="btn btn-danger btn-block">
+                  <button type="submit" class="btn mybtn-danger btn-block">
                     {" "}
                     Book Now
                   </button>

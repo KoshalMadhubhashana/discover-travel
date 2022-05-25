@@ -19,6 +19,8 @@ function Insertfunction() {
     const [expYear, setExpYear] = useState("");
     const [cvcNumber, setCvcNumber] = useState("");
 
+    const amount = window.location.href.split("http://localhost:3000/pay/")[1];
+    console.log(amount)
 
     function sendData(e) {
         e.preventDefault();
@@ -140,6 +142,15 @@ function Insertfunction() {
                                         <div className="row">
                                             <div className="col-sm-12">
                                                 <div className="form-group">
+                                                    <label htmlFor="name">AMOUNT</label>
+                                                    <input className="form-control" id="name" type="text"
+                                                           placeholder="Enter Your Name" disabled value={amount}/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-sm-12">
+                                                <div className="form-group">
                                                     <label htmlFor="name">CARDHOLDER NAME</label>
                                                     <input className="form-control" id="name" type="text"
                                                            placeholder="Enter Your Name" onChange={(e) => {
@@ -218,7 +229,8 @@ function Insertfunction() {
                                         </div>
                                     </div>
                                     <div className="card-footer">
-                                        <button className="mybtn-primary btn btn-sm btn-success float-right" type="submit">
+                                        <button className="mybtn-primary btn btn-sm btn-success float-right"
+                                                type="submit">
                                             <i className="mdi mdi-gamepad-circle"></i> Confirm
                                         </button>
                                         <button className="mybtn-danger btn btn-sm btn-danger" type="reset">

@@ -55,7 +55,7 @@ export default class CardItemsT extends Component {
     return (
       <div>
         <Navbar/>
-        <div className="mybg bodytravelpackage">
+        <div className="mybg top-down">
           <div className="bodytravelpackage, container" id="bbimg">
             <div>
               <br />
@@ -170,14 +170,14 @@ export default class CardItemsT extends Component {
               <hr />
               <Row xs={1} md={1} className="g-4" id="by" class="rounded">
                 {this.state.posts.map((posts, idx) => (
+
                   <div class="container py-1">
                     <article class="postcard postcardtr dark blue">
                       <a class="postcard__img_link">
                         <img
-                          class="postcard__img"
-                          src={`/uploads/${posts.packageImage}`}
-                          alt="..."
-                        />
+                            className="postcard__img"
+                            // src={`/uploads/package/${encodeURI(posts.packageImage)}`}/>
+                            src={`../../public/uploads/package/${posts.packageImage}`}/>
                       </a>
                       <div class="postcard__text">
                         <h1 class="postcard__title blue">
@@ -238,7 +238,7 @@ export default class CardItemsT extends Component {
                           <li>
                             <button
                               type="button"
-                              class="btn btn-primary abv"
+                              class="btn mybtn-primary abv"
                               id="cardbtn2"
                             >
                               <a

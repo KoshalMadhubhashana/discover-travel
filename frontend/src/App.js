@@ -136,7 +136,7 @@ function App() {
                 {/*payment*/}
                 <Route path="/view" element={<AllPayment/>}/>
                 <Route path='/update/:id' element={<EditPayment/>}/>
-                <Route path='/pay' element={[<Header/>,<br/>,<br/>,<Insertfunction/>, <Footer/>]} />
+                <Route path='/pay/:id' element={[<Header/>,<br/>,<br/>,<Insertfunction/>, <Footer/>]} />
 
 
                 {/*<Route path="/" element={<Home />} />*/}
