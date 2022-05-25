@@ -37,7 +37,7 @@ const UserAdminpage = () => {
                     <div>
                         <h1 className=" text-4xl mt-20">All User Details</h1>
                     </div>
-                    <div class="flex flex-col">
+                    <div class="flex flex-col " style={{marginLeft:"220px"}}>
                         <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                             <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
                                 <div class="overflow-hidden">
