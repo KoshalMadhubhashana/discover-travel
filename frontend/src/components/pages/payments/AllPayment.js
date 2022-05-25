@@ -211,11 +211,7 @@ class AllPayment extends React.Component {
     }
 
     render() {
-        const { posts, sortType } = this.state;
-        const sorted = posts.sort((a, b) => {
-            const isReversed = sortType === "asc" ? 1 : -1;
-            return isReversed * a.packagename.localeCompare(b.packagename);
-        });
+        const { posts } = this.state;
 
 
         return (

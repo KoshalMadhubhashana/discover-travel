@@ -1,6 +1,6 @@
 const GuideModel = require("../../models/Guide");
 const SendEmail = require("../../utils/SendEmail");
-// const crypto = require("crypto");
+const crypto = require("crypto");
 
 //when we use asynchronous function we need try catch block
 exports.register = async (req, res) => {

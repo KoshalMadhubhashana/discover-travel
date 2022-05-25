@@ -50,7 +50,6 @@ const ReviewBooking = () => {
                   </div>
                   <div className="mt-2 text-lg text-yellow-600 font-bold flex justify-between">
                     <div className="flex">Weight :</div>
-                    <div className="flex">Weight :</div>
                     <div className="flex">{value.weight}Kg</div>
                   </div>
                   <div className="mt-2 text-lg text-green-700 font-bold flex justify-between">
@@ -69,7 +68,7 @@ const ReviewBooking = () => {
         })}
         <br />
         <div className="mb-4 text-center mt-10">
-          <NavLink to="/pay">
+          <NavLink to="/pay/500">
             <button className="btn mybtn-danger" type="danger">PROCEED</button>
           </NavLink>
         </div>
