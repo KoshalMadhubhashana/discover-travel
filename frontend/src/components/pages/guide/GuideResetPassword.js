@@ -6,6 +6,7 @@ import { FileDoneOutlined, InfoCircleOutlined } from "@ant-design/icons";
 
 import axios from "axios";
 import "./Styles/Admin.css";
+import Navbar from "../../common/navbar/navbar";
 
 const layout = {
   labelCol: {
@@ -71,12 +72,13 @@ const ForgotPasword = () => {
   return (
     <>
       {" "}
-      <div className="container mx-auto contact-bg">
+      <Navbar/>
+      <div className="container mx-auto top-down mybg">
         <div className="flex justify-center mt-8 gap-28 mb-10 w-full">
-          <div className=" border-2 text-center border-gray-900 px-72 register-bg bg-cover mt-10 mb-10">
+          <div className=" text-center  px-60 card mt-10 mb-10">
             <div className="mb-10">
               <div className="mt-20 flex">
-                <div className=" -translate-x-44">
+                <div className=" ">
                   <Form
                     {...layout}
                     form={form}
@@ -162,9 +164,9 @@ const ForgotPasword = () => {
                     </div>
                     <Form.Item {...tailLayout}>
                       <div className="flex  px-20 mt-8">
-                        <Button type="primary" htmlType="submit">
+                        <button type="primary" htmlType="submit" className="btn mybtn-primary">
                            Confirm
-                        </Button>{" "}
+                        </button>{" "}
                       </div>
                     </Form.Item>
                   </Form>

@@ -8,6 +8,7 @@ import axios from "axios";
 import "./Styles/Admin.css";
 
 import { Link } from "react-router-dom";
+import Navbar from "../../common/navbar/navbar";
 
 const layout = {
   labelCol: {
@@ -24,7 +25,7 @@ const tailLayout = {
   },
 };
 
-const ForgotPasword = () => {
+const GuideForgotPasword = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -62,9 +63,10 @@ const ForgotPasword = () => {
   return (
     <>
       {" "}
-      <div className="container mx-auto contact-bg">
+      <Navbar/>
+      <div className="container mx-auto mybg">
         <div className="flex justify-center mt-8 gap-28 mb-10 w-full">
-          <div className=" border-2 text-center border-gray-900 px-72 register-bg bg-cover mt-10 mb-10">
+          <div className="text-center px-72 card mt-10 mb-10">
             <div className="mb-10">
               <div className="mt-20 flex">
                 <div className=" -translate-x-44">
@@ -75,7 +77,7 @@ const ForgotPasword = () => {
                     onFinish={() => forgotpasswordHandler("top")}
                   >
                     <div className=" mb-8 ml-28 font-semibold text-3xl  border-2 p-2 w-96 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl">
-                      Forgot Password
+                     Guide Forgot Password
                     </div>
                     <div className=" absolute -translate-y-8 ml-96 translate-x-72">
                       <p style={{ color: "red" }}>
@@ -134,9 +136,9 @@ const ForgotPasword = () => {
                     </div>
                     <Form.Item {...tailLayout}>
                       <div className="flex  px-20 mt-8">
-                        <Button type="primary" htmlType="submit">
+                        <button type="primary" htmlType="submit" className="btn mybtn-primary">
                           Request
-                        </Button>{" "}
+                        </button>{" "}
                       </div>
                     </Form.Item>
                   </Form>
@@ -150,4 +152,4 @@ const ForgotPasword = () => {
   );
 };
 
-export default ForgotPasword;
+export default GuideForgotPasword;

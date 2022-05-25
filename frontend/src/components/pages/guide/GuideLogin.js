@@ -180,7 +180,7 @@ const GuideLogin = () => {
                         />
                       </Form.Item>
                     </div>
-                    <Link to={"/forgotpassword"}>
+                    <Link to={"/forgot-password"}>
                       <div className="ml-10">
                         Forgot password?
                       </div>

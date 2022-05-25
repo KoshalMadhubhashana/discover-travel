@@ -74,6 +74,8 @@ import GuideLogin from "./components/pages/guide/GuideLogin";
 import UserProfile from "./components/pages/user/User/UserProfile";
 import MyDashbord from "./components/pages/user/User/MyDashbord";
 import UserAdminpage from "./components/pages/user/UserAdminpage";
+import GuideForgotPasword from "./components/pages/guide/ForgotPassword";
+import GuideResetPassword from "./components/pages/guide/GuideResetPassword";
 
 function App() {
     return (
@@ -109,8 +111,8 @@ function App() {
                 <Route path="/guidedetails" element={<GuideDetaiils/>}/>
                 <Route path="/guide-login" element={[<GuideLogin/>]}/>
                 <Route path="/guide-register" element={[<GuidSignUpForm/>]}/>
-                {/*<Route path="/forgotpassword" element={[<NavBar/>, <ForgotPasword/>]}/>*/}
-                {/*<Route path="/passwordreset/:resetToken" element={[<NavBar/>, <ResetPassword/>]}/>*/}
+                <Route path="/forgot-password" element={<GuideForgotPasword/>}/>
+                <Route path="/password-reset/:resetToken" element={[ <GuideResetPassword/>]}/>
 
                 <Route path="/guide-admin" element={<GuideAdminpage />} />
 

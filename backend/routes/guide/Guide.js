@@ -101,7 +101,7 @@ exports.forgotPassword = async (req, res) => {
 
     await guid.save();
 
-    const resetURL = `http://localhost:3000/passwordreset/${resetToken}`; //setting a URL to send to the user for emails
+    const resetURL = `http://localhost:3000/password-reset/${resetToken}`; //setting a URL to send to the user for emails
 
     const message = `
         <h1>You have requested a password reset</h1>
