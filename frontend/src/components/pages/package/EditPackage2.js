@@ -73,7 +73,7 @@ const EditTPackage = (props) => {
             });
 
         history.push(
-            `/travelpackages/travelpackage/admin/${props.match.params.id}`
+            `/travelpackages/travelpackage/admin/${id}`
         );
     };
 

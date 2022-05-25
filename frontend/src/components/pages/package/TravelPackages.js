@@ -177,7 +177,7 @@ export default class CardItemsT extends Component {
                         <img
                             className="postcard__img"
                             // src={`/uploads/package/${encodeURI(posts.packageImage)}`}/>
-                            src={`../../public/uploads/package/${posts.packageImage}`}/>
+                            src={`/uploads/${posts.packageImage}`}/>
                       </a>
                       <div class="postcard__text">
                         <h1 class="postcard__title blue">
