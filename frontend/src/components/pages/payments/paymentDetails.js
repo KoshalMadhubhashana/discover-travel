@@ -2,6 +2,9 @@ import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import axios from "axios";
 import Navbar from "../../common/navbar/navbar";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { faShieldVirus } from "@fortawesome/free-solid-svg-icons";
 
 
 function Insertfunction() {
@@ -41,7 +44,7 @@ function Insertfunction() {
             expYear,
             cvcNumber
         }
-
+//Validation
         axios.post("http://localhost:8070/payment/add", newPayment).then(() => {
             alert("Payment Successfull");
             setFisrtName("")
@@ -60,10 +63,11 @@ function Insertfunction() {
             setCvcNumber("")
             window.location.reload();
         }).catch((err) => {
-            alert(err)
+            alert("Fill the required Fields..")
         })
 
     }
+    
 
     return (
         <div>
@@ -97,7 +101,7 @@ function Insertfunction() {
                         </div>
                         <div className="form-group col-md-6">
                             <label htmlFor="inputPassword4">PHONE NUMBER</label>
-                            <input type="number" className="form-control" id="phoneNumber" placeholder="Phone Number"
+                            <input type="text" className="form-control" id="phoneNumber"maxLength={"10"} placeholder="Phone Number"
                                    onChange={(e) => {
                                        setPhoneNumber(e.target.value)
                                    }}/>
@@ -169,7 +173,7 @@ function Insertfunction() {
                                                             <input className="form-control" type="text"
                                                                    placeholder="0000 0000 0000 0000"
                                                                    autoComplete="email"
-                                                                   maxLength={"16"} onChange={(e) => {
+                                                                   maxLength={"16"} onChange={(e) => { 
                                                                 setCardNumber(e.target.value)
                                                             }}/>
                                                             <div className="input-group-append">
@@ -206,18 +210,19 @@ function Insertfunction() {
                                                     <select className="form-control" id="ccyear" onChange={(e) => {
                                                         setExpYear(e.target.value)
                                                     }}>
-                                                        <option>2014</option>
-                                                        <option>2015</option>
-                                                        <option>2016</option>
-                                                        <option>2017</option>
-                                                        <option>2018</option>
-                                                        <option>2019</option>
-                                                        <option>2020</option>
+                                                        
                                                         <option>2021</option>
                                                         <option>2022</option>
                                                         <option>2023</option>
                                                         <option>2024</option>
                                                         <option>2025</option>
+                                                        <option>2026</option>
+                                                        <option>2027</option>
+                                                        <option>2028</option>
+                                                        <option>2029</option>
+                                                        <option>2030</option>
+                                                        <option>2031</option>
+                                                        <option>2032</option>
                                                     </select>
                                                 </div>
                                                 <div className="col-sm-4">
@@ -252,3 +257,4 @@ function Insertfunction() {
 }
 
 export default Insertfunction;
+
